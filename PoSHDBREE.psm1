@@ -74,6 +74,7 @@ function Write-DBREEBytestoFile
     {
         $writer.WriteByte($bytearray[$index])
     }
+    $writer.Seek(0,[System.IO.SeekOrigin]::Begin)
     $writer.Close()
 }
 <#
